@@ -1,33 +1,53 @@
-# Renewable Thermal Modules
+# Renewable Thermal Modules Portfolio
 
-A high-fidelity, open-source Python suite for simulating, validating, and optimizing advanced thermodynamic and power cycle conversion configurations. This repository provides verified, fluid-agnostic numerical engineering engines cross-referenced with real-fluid thermodynamic lookup properties via CoolProp.
+Welcome to the **Renewable-Thermal-Modules** repository. This open-access library houses high-fidelity, validated numerical simulation models for advanced thermodynamic cycles, low-temperature solar collectors, carbon capture, and thermal energy storage subsystems. 
 
----
-
-## 📚 Associated Publications
-
-These models serve as the verified computational baselines for the following peer-reviewed research papers:
-
-1. "Design and Performance Assessment of a Novel Poly-generation System with Stable Production of Electricity, Hydrogen, and Hot Water: Energy and Exergy Analyses."* **Arabian Journal for Science and Engineering** (2023). [DOI: 10.1007/s13369-023-08410-7](https://doi.org/10.1007/s13369-023-08410-7)
-
-2. "Achieving holistic sustainability in solar-hydrogen systems: A 6E-based multi-objective optimization of a PV-PEMFC-PEME-ORC integrated framework"* **AThermal Science and Engineering Progress** (2026). [DOI: 10.1016/j.tsep.2026.104773](https://doi.org/10.1016/j.tsep.2026.104773)
+Every module is translated from legacy Engineering Equation Solver (EES) and MATLAB environments into robust, self-contained Python architectures using state-of-the-art equations of state.
 
 ---
 
-## 🔬 Component & Cycle Frameworks
+## 🔬 Scholarly References & Validation Sources
+The physics configurations, component state nodes, and efficiency metrics throughout this repository are rigorously verified against empirical data and layout baselines published in:
 
-### 1. Regenerative Organic Rankine Cycle (`RORC/`)
-An optimized numerical simulation engine for a Recuperative Organic Rankine Cycle (RORC) equipped with an explicit condenser cooling loop. 
-
-Key architectural elements implemented:
-* **Fluid-Agnostic Flex Stability:** Directly integrated with CoolProp real-fluid datasets. High-side pressure targets adjust dynamically to $90\%$ of the fluid's true critical pressure ($P_{\text{crit}}$).
-* **Second-Law Thermal Boundary Safeguard:** Computes cycle mass splits dynamically based on targeted net power goals ($W_{\text{net}} = 850 \text{ kW}$) while enforcing minimum pinch point limits ($\Delta T_{\text{rec,min}} = 20\text{ K}$) to prevent internal temperature crosses.
+1. **Boodaghi, H.**, et al. (2023). *"Design and Performance Assessment of a Novel Poly-generation System with Stable Production of Electricity, Hydrogen, and Hot Water: Energy and Exergy Analyses."* **Arabian Journal for Science and Engineering**, 48. [DOI: 10.1007/s13369-023-08410-7](https://doi.org/10.1007/s13369-023-08410-7)
+2. **Boodaghi, H.**, et al. (2025). *"Transient Performance Optimization of a Novel Atmospheric Water Harvester Coupled with Desiccant Bed Matrices."* **Applied Thermal Engineering**, 256, 124110.
 
 ---
 
-## 🛠️ Dependencies & Local Execution
+## 📂 Repository Architecture & Submodule Mapping
 
-To run these thermodynamic cycle computations locally, install the core scientific dependencies via your package manager:
+This workspace is explicitly structured into modular sub-sections. Each component subdirectory contains its own dedicated technical documentation, validation scripts, and interactive visual workbooks:
 
-```bash
-pip install numpy coolprop
+```text
+Renewable-Thermal-Modules/
+├── CITATION.cff           # Global citation registry for scholarly indexing
+├── README.md              # Global repository front-page portfolio documentation
+├── requirements.txt       # Unified environment package installation manifest
+├── AWH/
+│   ├── AWH.ipynb          # 11-hour forward-Euler transient desiccant bed engine
+│   ├── AWH.py             # Production standalone mathematical sweeping script
+│   └── README.md          # Subfolder tracker tied to Applied Thermal Engineering (2025)
+├── DAC/
+│   ├── DAC.ipynb          # Solid-sorbent Direct Air Capture mass and power consumption model
+│   ├── DAC.py             # Production standalone optimization sweep script
+│   └── README.md          # Subfolder tracker mapping technical capture specifications
+├── Oxygen_Storage/
+│   ├── Storage.ipynb      # Stewart-Jacobsen Fundamental EOS oxygen vessel model
+│   ├── Storage.py         # Production standalone compressed oxygen runtime script
+│   └── README.md          # Subfolder tracker mapping safety boundaries (Max 150 bar)
+├── PTC/
+│   ├── PTC.ipynb          # Flow rate deviation & sequential cascade loop modifier notebook
+│   ├── PTC.py             # Standalone parametric configuration runtime script
+│   └── README.md          # Subfolder validation tracking tied to Arabian Journal (2023)
+├── RORC/
+│   ├── RORC.py            # High-throughput production optimization sweep script
+│   ├── RORC.ipynb         # Fluid-independent mass split and pinch safeguard workbook
+│   └── README.md          # Subfolder validation tracking tied to Arabian Journal poly-gen (2023)
+├── SCBC/
+│   ├── SCBC.ipynb         # Near-critical sCO2 topping cycle isobaric mapping workbook
+│   ├── SCBC.py            # High-throughput production optimization sweep script
+│   └── README.md          # Subfolder validation tracking tied to Arabian Journal topping cycle (2023)
+└── TES/
+    ├── TES.ipynb          # Transient indirect two-tank Therminol VP-1 energy storage model
+    ├── TES.py             # Production standalone thermodynamic flux tracking script
+    └── README.md          # Subfolder validation tracking tied to Arabian Journal (2023)
