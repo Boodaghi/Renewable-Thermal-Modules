@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you utilize these thermal simulation modules or thermodynamic cycle architectures in your research, please cite the underlying journal article as below."
+authors:
+  - family-names: "Boodaghi"
+    given-names: "Homayoun"
+    orcid: "https://orcid.org/0000-0002-4959-4925"
+title: "Renewable-Thermal-Modules: High-Fidelity RORC and Thermal Component Simulation Suites"
+version: "1.0.0"
+date-released: "2026-06-13"
+url: "https://github.com/Boodaghi/Renewable-Thermal-Modules"
+references:
+  - type: article
+    authors:
+      - family-names: "Boodaghi"
+        given-names: "Homayoun"
+    title: "Design and Performance Assessment of a Novel Poly-generation System with Stable Production of Electricity, Hydrogen, and Hot Water: Energy and Exergy Analyses"
+    journal: "Arabian Journal for Science and Engineering"
+    year: 2023
+    doi: "10.1007/s13369-023-08410-7"
