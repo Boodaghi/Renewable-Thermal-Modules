@@ -8,7 +8,9 @@ A high-fidelity, open-source Python suite for simulating, validating, and optimi
 
 These models serve as the verified computational baselines for the following peer-reviewed research papers:
 
-1. **H. Boodaghi**, et al. *"Design and Performance Assessment of a Novel Poly-generation System with Stable Production of Electricity, Hydrogen, and Hot Water: Energy and Exergy Analyses."* **Arabian Journal for Science and Engineering** (2023). [DOI: 10.1007/s13369-023-08410-7](https://doi.org/10.1007/s13369-023-08410-7)
+1. "Design and Performance Assessment of a Novel Poly-generation System with Stable Production of Electricity, Hydrogen, and Hot Water: Energy and Exergy Analyses."* **Arabian Journal for Science and Engineering** (2023). [DOI: 10.1007/s13369-023-08410-7](https://doi.org/10.1007/s13369-023-08410-7)
+
+2. "Achieving holistic sustainability in solar-hydrogen systems: A 6E-based multi-objective optimization of a PV-PEMFC-PEME-ORC integrated framework"* **AThermal Science and Engineering Progress** (2026). [DOI: 10.1016/j.tsep.2026.104773](https://doi.org/10.1016/j.tsep.2026.104773)
 
 ---
 
